@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Notes App</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app" id="notesApp">
+
+        <header class="app-header">
+
+            <h1>📚 Study Notes</h1>
+
+            <button id="darkModeToggle" type="button">
+                🌙 Dark Mode
+            </button>
+
+            <p>Your personal study space</p>
+
+            <span id="noteCount">0 Notes</span>
+
+        </header>
+
+        <main>
+
+            <section class="note-form">
+
+                <h2>Create a New Note</h2>
+
+                <label for="noteTitle">Note Title</label>
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Note title">
+
+                <label for="noteSubject">Subject</label>
+
+                <input
+                    type="text"
+                    id="noteSubject"
+                    list="subjectOptions"
+                    placeholder="Choose or type a subject">
+
+                <datalist id="subjectOptions">
+                    <option value="Forensic Science">
+                    <option value="Cybersecurity">
+                    <option value="Computer Science">
+                    <option value="Digital Forensics">
+                    <option value="Forensic Toxicology">
+                    <option value="Ballistics">
+                </datalist>
+
+                <label for="noteContent">Note Content</label>
+
+                <textarea
+                    id="noteContent"
+                    placeholder="Write your notes here..."></textarea>
+
+                <button id="saveNote" type="button">
+                    Save Note
+                </button>
+
+            </section>
+
+            <section class="notes-section">
+
+                <h2>My Notes</h2>
+
+                <div class="note-controls">
+
+                    <input
+                        type="search"
+                        id="searchNotes"
+                        placeholder="Search notes...">
+
+                    <select id="filterSubject">
+                        <option value="All">All Subjects</option>
+                        <option value="Forensic Science">Forensic Science</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+
+                <div id="notesContainer"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
